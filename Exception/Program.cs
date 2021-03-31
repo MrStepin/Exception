@@ -10,6 +10,10 @@ namespace Exception
     {
         private static int Maximum (int[] massive)
         {
+            if (massive.Length == 0)
+            {
+                throw new ArgumentException();
+            }
             int maximum = massive[0];
             for (int i = 0; i < massive.Length; i++)
             {
@@ -36,14 +40,6 @@ namespace Exception
                 Console.WriteLine(Maximum(testMassive[numOfMassive]));
             }
             catch (ArgumentException)
-            {
-                Console.WriteLine("Massive is empty");
-            }
-            catch (IndexOutOfRangeException)
-            {
-                Console.WriteLine("Massive is empty");
-            }
-            catch (NullReferenceException)
             {
                 Console.WriteLine("Massive is empty");
             }
