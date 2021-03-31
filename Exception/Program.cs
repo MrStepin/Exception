@@ -8,8 +8,42 @@ namespace Exception
 {
     class Program
     {
+        private static int Maximum (int[] massive)
+        {
+            int maximum = massive[0];
+            for (int i = 0; i < massive.Length; i++)
+            {
+                if(maximum < massive[i])
+                {
+                    maximum = massive[i];
+                }
+            }
+            return maximum;
+        }
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter number from 0 to 4.");
+            int numOfMassive = Convert.ToInt16(Console.ReadLine());
+
+            int[][] testMassive = new int[5][];
+            testMassive[0] = new int[] { };
+            testMassive[1] = new int[] { 4, 5, 6, 7 };
+            testMassive[2] = new int[] { 8, 9, 10, 11 };
+            testMassive[3] = new int[] { 12, 13, 14, 15 };
+            testMassive[4] = new int[] { 16, 17, 18, 19 };
+            try
+            {
+                Console.WriteLine(Maximum(testMassive[numOfMassive]));
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Massive is empty");
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("Massive is empty");
+            }
+            Console.ReadKey();
         }
     }
 }
