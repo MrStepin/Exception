@@ -43,6 +43,10 @@ namespace Exception
             {
                 Console.WriteLine("Massive is empty");
             }
+            catch (NullReferenceException)
+            {
+                Console.WriteLine("Massive is empty");
+            }
             Console.ReadKey();
         }
     }
