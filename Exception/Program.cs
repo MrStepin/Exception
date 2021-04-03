@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exception
 {
-    class Program
+    public class Program
     {
-        private static int Maximum (int[] massive)
+        public static int Maximum (int[] massive)
         {
             if (massive.Length == 0)
             {
