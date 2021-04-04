@@ -18,7 +18,7 @@ namespace Test
 
             int maximum = Program.Maximum(testMassive);
 
-            AssertMoreThan.Greater(maximum, testMassive);
+            ConsoleApp1.Program.Greater(maximum, testMassive);
 
         }
     }
