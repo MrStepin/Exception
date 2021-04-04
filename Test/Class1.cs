@@ -18,9 +18,9 @@ namespace Test
 
             int maximum = Program.Maximum(testMassive);
 
-            int ReferenceValue = 10;
+            int referenceValue = 10;
 
-            MyAsserts.AssertMoreThan.Greater(maximum, ReferenceValue);
+            MyAsserts.AssertMoreThan.Greater(maximum, referenceValue);
         }
 
         [Test]
@@ -30,9 +30,9 @@ namespace Test
 
             int maximum = Program.Maximum(testMassive);
 
-            int ReferenceValue = 19;
+            int referenceValue = 19;
 
-            MyAsserts.AssertMoreThan.Equals(maximum, ReferenceValue);
+            MyAsserts.AssertMoreThan.Equals(maximum, referenceValue);
         }
     }
 }
