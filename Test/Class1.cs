@@ -16,15 +16,9 @@ namespace Test
         {
             int [] testMassive = new int[] { 16, 17, 18, 19 };
 
-            if (Program.Maximum(testMassive) > 10)
-            {
 
-            }
-            else
-            {
-                throw new ArgumentException();
-            }
-            
+            AssertMoreThan.Greater(Program.Maximum(testMassive), testMassive);
+
         }
     }
 }
