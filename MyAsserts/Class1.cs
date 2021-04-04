@@ -15,5 +15,13 @@ namespace MyAsserts
                 throw new ArgumentException();
             }
         }
+
+        public static void Equals(int compareNumber, int value)
+        {
+            if (compareNumber != value)
+            {
+                throw new ArgumentException();
+            }
+        }
     }
 }

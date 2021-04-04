@@ -12,16 +12,27 @@ namespace Test
     public class Class1
     {
         [Test]
-        public void CheckMassive()
+        public void CheckGreater()
         {
             int [] testMassive = new int[] { 16, 17, 18, 19 };
 
             int maximum = Program.Maximum(testMassive);
 
-            int value = 10;
+            int ReferenceValue = 10;
 
-            MyAsserts.AssertMoreThan.Greater(maximum, value);
+            MyAsserts.AssertMoreThan.Greater(maximum, ReferenceValue);
+        }
 
+        [Test]
+        public void CheckEquals()
+        {
+            int[] testMassive = new int[] { 16, 17, 18, 19 };
+
+            int maximum = Program.Maximum(testMassive);
+
+            int ReferenceValue = 19;
+
+            MyAsserts.AssertMoreThan.Equals(maximum, ReferenceValue);
         }
     }
 }
