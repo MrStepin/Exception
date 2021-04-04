@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace Exception
 {
-    public static class AssertMoreThan
+    public static class Assert
     {
-        public static void Greater(int condition)
-        {
-            if (condition <= 10)
-            {
-                throw new ArgumentException();
-            }
-        }
+
     }
 }
