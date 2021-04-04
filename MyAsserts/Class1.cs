@@ -8,9 +8,9 @@ namespace MyAsserts
 {
     public static class AssertMoreThan
     {
-        public static void Greater(int maximumOfMassive, int value)
+        public static void Greater(int compareNumber, int value)
         {
-            if (maximumOfMassive <= value)
+            if (compareNumber <= value)
             {
                 throw new ArgumentException();
             }
