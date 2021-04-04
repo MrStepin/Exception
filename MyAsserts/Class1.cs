@@ -8,7 +8,7 @@ namespace MyAsserts
 {
     public static class AssertMoreThan
     {
-        public static void Greater(int condition, int[] testMassive)
+        public static void Greater(int condition)
         {
             if (condition <= 10)
             {
