@@ -51,9 +51,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\ConsoleApp1.csproj">
+    <ProjectReference Include="..\ConsoleApp1\MyAsserts.csproj">
       <Project>{44d17c7f-ffd6-4f2b-93c2-71b3780a9dcd}</Project>
-      <Name>ConsoleApp1</Name>
+      <Name>MyAsserts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Exception\Exception.csproj">
       <Project>{932b7596-8505-4532-af5d-6d3ffbd5ec0c}</Project>
