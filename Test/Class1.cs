@@ -16,7 +16,7 @@ namespace Test
         {
             int [] testMassive = new int[] { 16, 17, 18, 19 };
 
-            object maximum = Program.Maximum(testMassive);
+            int maximum = Program.Maximum(testMassive);
 
             AssertMoreThan.Greater(maximum, testMassive);
 

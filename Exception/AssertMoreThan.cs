@@ -8,9 +8,9 @@ namespace Exception
 {
     public static class AssertMoreThan
     {
-        public static void Greater(object condition, int[] testMassive)
+        public static void Greater(int condition, int[] testMassive)
         {
-            if (Program.Maximum(testMassive) <= 10)
+            if (condition <= 10)
             {
                 throw new ArgumentException();
             }
