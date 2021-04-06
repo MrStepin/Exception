@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Exception;
+
 
 namespace Exception
 {
@@ -24,6 +26,20 @@ namespace Exception
             }
             return maximum;
         }
+
+        public static string Download(string url)
+        {
+            if (url == null)
+                throw new System.Exception();
+
+            return "content";
+        }
+
+        public static string DownloadErr(string url)
+        {
+            return "content";
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Enter number from 0 to 4.");

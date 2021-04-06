@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MyAsserts
 {
     public static class AssertMoreThan
@@ -22,6 +23,20 @@ namespace MyAsserts
             {
                 throw new ArgumentException();
             }
+        }
+
+        public static void Throws(Action action)
+        {
+            try
+            {
+                action();
+            }
+            catch
+            {
+                return;
+            }
+
+            throw new Exception();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using Exception;
+using Assert = Exception.Assert;
 using Exception = System.Exception;
 
 namespace Test
@@ -33,6 +34,28 @@ namespace Test
             int referenceValue = 19;
 
             MyAsserts.AssertMoreThan.Equals(maximum, referenceValue);
+        }
+
+        [Test]
+        public void CheckThrowsNull()
+        {
+            string url = null;
+            Action action = () => { Program.Download(url); };
+            MyAsserts.AssertMoreThan.Throws(action);
+        }
+        [Test]
+        public void CheckThrowsNotNull()
+        {
+            string url = "a";
+            Action action = () => { Program.Download(url); };
+            MyAsserts.AssertMoreThan.Throws(action);
+        }
+        [Test]
+        public void CheckThrowsErr()
+        {
+            string url = "a";
+            Action action = () => { Program.DownloadErr(url); };
+            MyAsserts.AssertMoreThan.Throws(action);
         }
     }
 }
